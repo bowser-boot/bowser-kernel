@@ -533,15 +533,6 @@ struct tf_device *tf_get_device(void);
 
 #define CLEAN_CACHE_CFG_MASK	(~0xC) /* 1111 0011 */
 
-/*----------------------------------------------------------------------------*/
-/*
- * Kernel Differences
- */
-
-#ifdef CONFIG_ANDROID
 #define GROUP_INFO		get_current_groups()
-#else
-#define GROUP_INFO		(current->group_info)
-#endif
 
 #endif  /* !defined(__TF_DEFS_H__) */
